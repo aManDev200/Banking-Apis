@@ -6,6 +6,12 @@ const router = express.Router();
 
 /**
  * @swagger
+ * tags:
+ *   name: User-Account
+ *   description: User-Account management
+ */
+/**
+ * @swagger
  * /api/user-Account/deposit:
  *   post:
  *     summary: Deposit money into user account
