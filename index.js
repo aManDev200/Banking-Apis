@@ -38,10 +38,6 @@ const swaggerOptions = {
     },
     servers: [
       {
-        url: `http://localhost:${PORT}`,
-        description: 'Development server',
-      },
-      {
         url: `https://banking-apis-3.onrender.com`,
         description: 'Production server',
       }
