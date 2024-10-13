@@ -13,13 +13,6 @@ import { authMiddleware, authorizeUser,authorizeEmployee } from '../middleware/a
 const router = Router();
 /**
  * @swagger
- * tags:
- *   name: User
- *   description: User management
- */
-
-/**
- * @swagger
  * /api/users/role:
  *   put:
  *     summary: Update user role
