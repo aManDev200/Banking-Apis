@@ -5,12 +5,6 @@ import { authMiddleware, authorizeUser,authorizeEmployee } from '../middleware/a
 const router = express.Router();
 /**
  * @swagger
- * tags:
- *   name: Employee-Account
- *   description: Employee-Account management
- */
-/**
- * @swagger
  * /api/employee-account/deposit:
  *   post:
  *     summary: Deposit money into employee account
