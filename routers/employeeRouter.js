@@ -10,7 +10,12 @@ import {
 import { authMiddleware, authorizeUser,authorizeEmployee } from '../middleware/authMiddleware.js';
 
 const router = Router();
-
+/**
+ * @swagger
+ * tags:
+ *   name: Employee
+ *   description: Employee management
+ */
 /**
  * @swagger
  * /api/employee/role:
