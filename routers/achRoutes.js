@@ -9,12 +9,6 @@ import { authMiddleware, authorizeUser,authorizeEmployee } from '../middleware/a
 const router = Router();
 /**
  * @swagger
- * tags:
- *   name: ACH
- *   description: ACH Transactions and its managment
- */
-/**
- * @swagger
  * /api/ach/initiate-fee:
  *   post:
  *     summary: Initiate an ACH transaction with a fee
