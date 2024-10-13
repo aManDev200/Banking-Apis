@@ -2,12 +2,7 @@ import express from 'express';
 import { registerDebitCard, registerCreditCard, makeCardPayment, repayCreditCard } from '../controllers/cardController.js';
 
 const router = express.Router();
-/**
- * @swagger
- * tags:
- *   name: Cards
- *   description: Cards management(Debit and Credit)
- */
+
 /**
  * @swagger
  * /api/cards/registerdebitcards:
