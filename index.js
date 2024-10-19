@@ -41,6 +41,10 @@ const swaggerOptions = {
         url: `http://localhost:${PORT}`,
         description: 'Development server',
       },
+      {
+        url: `https://banking-apis-3.onrender.com`,
+        description: 'Production server',
+      }
     ],
   },
   apis: ['./routers/*.js', './controllers/*.js'], // Adjust this path if necessary
@@ -77,4 +81,4 @@ app.use((err, req, res, next) => {
   res.status(500).json({ error: 'Something went wrong!' });
 });
 
-module.exports = app;
+export default app;

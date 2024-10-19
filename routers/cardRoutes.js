@@ -1,8 +1,10 @@
 import express from 'express';
-import { registerDebitCard, registerCreditCard, makeCardPayment, repayCreditCard } from '../controllers/cardController.js';
+import { registerDebitCard, registerCreditCard, repayCreditCard ,updateBankAccount ,validateCard } from '../controllers/cardController.js';
 
 const router = express.Router();
 
+router.post('/validate', validateCard);
+router.post('/updateAccount',updateBankAccount);
 /**
  * @swagger
  * /api/cards/registerdebitcards:
@@ -85,43 +87,6 @@ router.post('/registerdebitcards', registerDebitCard);
  *         description: Server error
  */
 router.post('/registercreditcards', registerCreditCard);
-
-/**
- * @swagger
- * /api/cards/payments:
- *   post:
- *     summary: Make a payment using a card
- *     tags: [Cards]
- *     requestBody:
- *       required: true
- *       content:
- *         application/json:
- *           schema:
- *             type: object
- *             required:
- *               - cardId
- *               - amount
- *               - cardType
- *             properties:
- *               cardId:
- *                 type: string
- *               amount:
- *                 type: number
- *               cardType:
- *                 type: string
- *                 enum: [debit, credit]
- *     responses:
- *       200:
- *         description: Payment successful
- *       400:
- *         description: Insufficient balance or credit limit exceeded
- *       404:
- *         description: Card or linked account not found
- *       500:
- *         description: Server error
- */
-router.post('/payments', makeCardPayment);
-
 /**
  * @swagger
  * /api/cards/repay:

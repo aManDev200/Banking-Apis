@@ -14,6 +14,14 @@ const router = Router();
 
 /**
  * @swagger
+ * tags:
+ *   name: User
+ *   description: User Management
+ */
+
+
+/**
+ * @swagger
  * /api/users/role:
  *   put:
  *     summary: Update user role
