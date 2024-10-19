@@ -1,6 +1,5 @@
 import fetch from 'node-fetch';
 
-// Mock payment processor API service for cards
 const cardService = {
   registerDebitCard: async (card) => {
     try {
