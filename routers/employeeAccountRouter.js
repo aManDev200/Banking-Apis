@@ -3,7 +3,6 @@ import { deposit, withdraw, balanceInquiry, getPayroll, getTransactionHistory } 
 import { authMiddleware, authorizeUser,authorizeEmployee } from '../middleware/authMiddleware.js';
 
 const router = express.Router();
-
 /**
  * @swagger
  * /api/employee-account/deposit:
