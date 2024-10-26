@@ -3,7 +3,7 @@ import fetch from 'node-fetch';
 const cardService = {
   registerDebitCard: async (card) => {
     try {
-      const response = await fetch('http://localhost:7000/api/banks/register-card', {
+      const response = await fetch('https://payment-processor-a68l.onrender.com/api/banks/register-card', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -28,7 +28,7 @@ const cardService = {
 
   registerCreditCard: async (card) => {
     try {
-      const response = await fetch('http://localhost:7000/api/banks/register-card', {
+      const response = await fetch('https://payment-processor-a68l.onrender.com/api/banks/register-card', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
