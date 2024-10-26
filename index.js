@@ -21,7 +21,9 @@ const { sequelize } = config;
 
 // Middleware
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+  origin : '*',
+}));
 
 // Swagger configuration
 const swaggerOptions = {
